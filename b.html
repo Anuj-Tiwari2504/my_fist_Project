@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Appointment Booking</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="b.js"></script>
+    <link href="b.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+        // Name validation: केवल अल्फाबेट्स की अनुमति
+        function validateInput(event) {
+            const input = event.target.value;
+            // केवल अक्षर और स्पेस की अनुमति देता है
+            event.target.value = input.replace(/[^a-zA-Z\s]/g, '');
+        }
+
+        // Appointment form submission logic
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // Clear previous error messages
+                document.querySelectorAll('.error').forEach(error => error.textContent = '');
+
+                let valid = true;
+
+                // Get values from form fields
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const department = document.getElementById('department').value;
+                const symptoms = document.getElementById('symptoms').value;
+                const appointmentDate = document.getElementById('appointmentDate').value;
+                const appointmentTime = document.getElementById('appointmentTime').value;
+
+                // Validation checks
+                if (!name || !email || !phone || !department || !symptoms || !appointmentDate || !appointmentTime) {
+                    alert('Please fill all fields.');
+                    return;
+                }
+
+                // Store the appointment data temporarily
+                const newAppointment = {
+                    name,
+                    email,
+                    phone,
+                    department,
+                    symptoms,
+                    appointmentDate,
+                    appointmentTime
+                };
+
+                // Store appointment data in sessionStorage for the current session
+                sessionStorage.setItem('appointment', JSON.stringify(newAppointment));
+
+                // Redirect to the confirmation page
+                window.location.href = 'confirmation.html';
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+</head>
+<body>
+
+<div class="container">
+    <h2>Medical Appointment Booking</h2>
+    <form id="appointmentForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name"   oninput="validateInput(event)">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        
+
+
+
+        <label for="phone">Phone Number</label>
+<input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" 
+       oninput="validatePhoneInput(event)" pattern="\d*" title="Only numbers are allowed">
+       
+<script>
+function validatePhoneInput(event) {
+    const input = event.target;
+    // Remove any non-numeric characters (letters and special characters)
+    input.value = input.value.replace(/[^0-9]/g, '');
+}
+</script>
+
+
+
+
+
+
+
+
+        <fieldset>
+            <legend>Gender</legend>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="gender" value="Male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female" required> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Other" required> Other
+                </label>
+            </div>
+        </fieldset>
+
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+            <option value="" disabled selected>Select a specialty</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Ophthalmology">Ophthalmology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Psychiatry">Psychiatry</option>
+            <option value="Gastroenterology">Gastroenterology</option>
+            <option value="ENT (Ear, Nose, Throat)">ENT</option>
+        </select>
+
+        <label for="symptoms">Symptoms</label>
+        <input type="text" id="symptoms" name="symptoms" required placeholder="Enter your symptoms">
+
+        <label for="appointmentDate">Appointment Date</label>
+        <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+        <label for="appointmentTime">Appointment Time</label>
+        <input type="time" id="appointmentTime" name="appointmentTime" required>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</div>
+
+
+
+<script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Clear previous error messages
+        document.querySelectorAll('.error').forEach(error => error.textContent = '');
+
+        let valid = true;
+
+        // Get values from form fields
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const department = document.getElementById('department').value;
+        const symptoms = document.getElementById('symptoms').value;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const appointmentTime = document.getElementById('appointmentTime').value;
+
+        // Validation checks
+        if (!name || !email || !phone || !department || !symptoms || !appointmentDate || !appointmentTime) {
+            alert('Please fill all fields.');
+            return;
+        }
+
+        // Store the appointment data temporarily
+        const newAppointment = {
+            name,
+            email,
+            phone,
+            department,
+            symptoms,
+            appointmentDate,
+            appointmentTime
+        };
+
+        // Store appointment data in sessionStorage for the current session
+        sessionStorage.setItem('appointment', JSON.stringify(newAppointment));
+
+        // Redirect to the confirmation page
+        window.location.href = 'confirmation.html';
+    });
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+ /* Basic Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+  }
+
+  /* Navbar Styling */
+  nav {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 100;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 20px;
+  }
+
+  nav ul li {
+    margin-left: 30px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    background-color: #ffeb3b;
+    color: #333;
+    border-radius: 5px;
+  }
+
+  /* About Section */
+  #about {
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 60px; /* Adjusted for navbar */
+  }
+
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* Header Styling */
+  .about-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+    animation: fadeInOut 5s ease-in-out infinite;
+  }
+
+  .about-content .role {
+    font-size: 1.5rem;
+    color: #ffeb3b;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.7s ease-out;
+  }
+
+  .about-content .intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out;
+  }
+
+  .skills {
+    margin-top: 40px;
+    animation: fadeInUp 2.3s ease-out;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+  }
+
+  .skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .skills li {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+
+  .skills li:hover {
+    background-color: #ffeb3b;
+    color: #333;
+  }
+
+  /* Keyframe Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Fade In and Out for Text */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Footer Section */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer .footer-content {
+    font-size: 1rem;
+  }
+
+  footer .footer-content p {
+    margin: 5px 0;
+  }
+
+  footer .footer-content .bca {
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skills ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .skills li {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  }

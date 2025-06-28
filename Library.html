@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Enrollment Form</title>
+    <link href="Library.css" rel="stylesheet">
+    <script src="Library.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Colonel's Library &amp; Study Circle</h1>
+        <h2><font color="blue">Enrollment Form</font></h2>
+
+        <form id="enrollmentForm">
+            <!-- Student Information Section -->
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required="">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required="">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required="">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mobileNumber">Contact Number:</label>
+                <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Enter 10-digit mobile number" pattern="\d{10}" maxlength="10" required="" oninput="validateMobileNumber(this)">
+                <small>Mobile number must be 10 digits and numeric only.</small>
+            </div>
+
+            <!-- Education and Qualifications Section -->
+            <div class="section-header">
+                <h3>Education and Qualifications</h3>
+            </div>
+            <div class="form-group">
+                <label for="education">Highest Qualification:</label>
+                <input type="text" id="education" name="education" placeholder="Enter your highest qualification" required="">
+            </div>
+
+            <div class="form-group">
+                <label for="boardUniversity">Board/University:</label>
+                <input type="text" id="boardUniversity" name="boardUniversity" placeholder="Enter your board/university" required="">
+            </div>
+
+            <div class="form-group">
+                <label for="examPreparation">Exam for Which Preparation:</label>
+                <input type="text" id="examPreparation" name="examPreparation" placeholder="Enter exam name" required="">
+            </div>
+
+            <!-- Communication Address Section -->
+            <div class="section-header">
+                <h3>Communication Address</h3>
+            </div>
+            <div class="form-group">
+                <label for="houseNumberComm">House Number:</label>
+                <input type="text" id="houseNumberComm" name="houseNumberComm" placeholder="Enter house number">
+            </div>
+
+            <div class="form-group">
+                <label for="streetComm">Street/Area/Locality:</label>
+                <input type="text" id="streetComm" name="streetComm" placeholder="Enter street/area/locality">
+            </div>
+
+            <div class="form-group">
+                <label for="villageComm">Village:</label>
+                <input type="text" id="villageComm" name="villageComm" placeholder="Enter village">
+            </div>
+
+            <div class="form-group">
+                <label for="landmarkComm">Landmark:</label>
+                <input type="text" id="landmarkComm" name="landmarkComm" placeholder="Enter landmark">
+            </div>
+
+            <div class="form-group">
+                <label for="stateComm">State:</label>
+                <input type="text" id="stateComm" name="stateComm" placeholder="Enter state">
+            </div>
+
+            <div class="form-group">
+                <label for="districtComm">District:</label>
+                <input type="text" id="districtComm" name="districtComm" placeholder="Enter district">
+            </div>
+
+            <!-- Library Plan Section -->
+            <div class="section-header">
+                <h3>Library Plan</h3>
+            </div>
+            <div class="form-group">
+                <label for="plan">Select Plan:</label>
+                <select id="plan" name="plan" required="">
+                    <option value="">Choose Plan</option>
+                    <option value="Complete Freedom">Complete Freedom 07Am-11pm (16 Hours)</option>
+                    <option value="Morning Twelve">Morning Twelve 07Am-07pm (12 Hours)</option>
+                    <option value="Evening Twelve">Evening Twelve 11Am-11pm (12 Hours)</option>
+                    <option value="Morning Four">Morning Four 07Am-11Am (04 Hours)</option>
+                </select>
+            </div>
+
+            <!-- Terms and Agreement Section -->
+            <div class="section-header">
+                <h3>Terms and Conditions</h3>
+            </div>
+            <div class="form-group rules-regulations">
+                <ul>
+                    <li data-bullet="1.">The student must follow library timings.</li>
+                    <li data-bullet="2.">Maintain discipline and silence inside the library.</li>
+                    <li data-bullet="3.">Respect the library staff and other students.</li>
+                    <li data-bullet="4.">Damage or loss of library property will incur fines.</li>
+                    <li data-bullet="5.">Books should be returned on time.</li>
+                </ul>
+            </div>
+
+            <div class="form-group undertaking">
+                <h2><font color="Black  ">undertaking</font>
+                <ul>
+                    <li data-bullet="1.">I agree to all terms and conditions of the library.</li>
+                    <li data-bullet="2.">I understand the library’s rules and regulations and will adhere to them.</li>
+                </ul>
+            </div>
+
+            <div class="form-group inline-checkbox">
+                <input type="checkbox" id="agreement" name="agreement" value="yes" required="">
+                <label for="agreement">I agree to the above terms and conditions.</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit Enrollment Form</button>
+            </div>
+        </form>
+
+        <div id="message" class="message">
+            <strong>Success!</strong> Your enrollment form has been submitted successfully.
+        </div>
+    </div>
+
+   
+</body>
+</html>

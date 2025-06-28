@@ -1,0 +1,145 @@
+ /* Basic styles */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e99ba5, #8078f1d3, #a1c7e0); /* Red, orange, and yellow gradient */
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite; /* Animating the gradient */
+    transition: background-color 0.5s ease;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+h1, h2, h3 {
+    text-align: center;
+    color: #f5f5f5; /* Matching orange tone for heading */
+}
+h1 {
+    color: #C0392B; /* Red color for main heading */
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(240, 240, 240, 0.9); /* Transparent input background */
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: #FF5733; /* Red color on focus */
+    box-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+}
+.form-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF5733;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-group button:hover {
+    background-color: #FF8C00;
+}
+.form-group button:focus {
+    outline: 2px solid #333;
+}
+.message {
+    display: none;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #d4edda;
+    border-radius: 6px;
+    background-color: #d4edda;
+    color: #155724;
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+.form-group input, .form-group select {
+    background-color: rgba(240, 240, 240, 0.9);
+}
+/* Add some animation effects for focus and submit button */
+.form-group input:focus, .form-group select:focus {
+    background-color: #fff;
+    border-color: #66cc66;
+}
+.form-group button:focus {
+    background-color: #66cc66;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Gradient shift animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Form input custom styles */
+.inline-checkbox {
+    display: flex;
+    align-items: center;
+}
+.inline-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Section headers for clarity */
+.section-header {
+    background-color: #bb7cee;
+    color: rgb(122, 77, 247);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.rules-regulations ul, .undertaking ul {
+    list-style-type: none;
+    padding-left: 20px;
+    color: #555;
+}
+.rules-regulations li, .undertaking li {
+    margin-bottom: 10px;
+}
+.rules-regulations li[data-bullet]:before, .undertaking li[data-bullet]:before {
+    content: attr(data-bullet) ' ';
+    font-weight: bold;
+}
+
+/* Styling for checkbox alignment */
+.inline-checkbox {
+    margin-top: 10px;
+}

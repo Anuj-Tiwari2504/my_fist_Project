@@ -1,0 +1,254 @@
+ /* Resetting defaults */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark techy background */
+    color: #d1d1d1; /* Light gray text */
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1e1e2f; /* Slightly dark background for nav */
+    color: #00d4ff; /* Neon blue for a tech feel */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00d4ff;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: #27293d;
+    border-radius: 4px;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+#home {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Techy gradient */
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #00d4ff;
+    animation: glow 2s infinite alternate; /* Glowing effect */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #d1d1d1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content .btn {
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero-content .btn:hover {
+    background: #e85b50;
+    transform: scale(1.1);
+}
+
+/* About Section */
+#about {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #1e1e2f; /* Dark section for better readability */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00d4ff;
+}
+
+#about p {
+    font-size: 1.1rem;
+}
+
+/* Courses Section */
+#courses {
+    padding: 3rem 1rem;
+    background: #121212;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.course-card {
+    background: #1e1e2f;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.course-card img {
+    width: 100%;
+    border-bottom: 2px solid #00d4ff;
+}
+
+.course-card h3 {
+    margin: 1rem 0;
+    color: #00d4ff;
+}
+
+.course-card p {
+    padding: 0 1rem 1rem;
+    color: #d1d1d1;
+}
+
+.course-card .btn {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: #00d4ff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.course-card .btn:hover {
+    background: #00d4ff;
+    color: #121212;
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    padding: 3rem 1rem;
+    background: #1e1e2f;
+    color: #d1d1d1;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #00d4ff;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: #d1d1d1;
+}
+
+#contact button {
+    padding: 0.8rem 1.5rem;
+    background: #00d4ff;
+    border: none;
+    color: #121212;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#contact button:hover {
+    background: #00c1e0;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #0f2027;
+    color: #ccc;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff;
+    }
+    to {
+        text-shadow: 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}

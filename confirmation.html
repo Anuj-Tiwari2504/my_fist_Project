@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmation</title>
+    <link href="confirmation.css" rel="stylesheet">
+    <script src="confirmation.js"></script>
+
+
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Appointment Confirmation</h2>
+
+    <div id="appointmentDetailsContainer">
+        <!-- Appointment details will be displayed here -->
+    </div>
+
+    <button class="thankyou-btn" onclick="thankYouMessage()">Thank You</button>
+    <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+</div>
+
+</body>
+</html>
