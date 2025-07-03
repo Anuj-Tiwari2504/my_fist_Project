@@ -150,3 +150,19 @@
    
 </body>
 </html>
+
+
+
+ @media (max-width: 768px) {
+            .main { flex-direction: column; padding: 0.5rem 0.5rem 80px 0.5rem; /* Add padding for player */ }
+            .sidebar { width: 100%; margin: 0 0 0.5rem 0; }
+            .library { height: 250px; } /* Fixed height for library on mobile */
+            .main-content { padding: 0 1rem; }
+
+            .album { display: none; } /* Hide album info on small screens */
+            .player { width: 80%; }
+            .controls { width: 20%; padding: 0; justify-content: center; }
+            .hide-on-mobile { display: none; }
+            .music-player { padding: 0; }
+        }
+
