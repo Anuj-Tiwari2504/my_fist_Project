@@ -17,42 +17,45 @@
 
     <!-- Navigation -->
     <nav>
-        <div class="logo">WeCare <span>Health</span></div>
-        <ul class="menu">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#find-doctor">Our Specialists</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-        </ul>
-        <a href="b.html" class="nav-appointment-btn">Make an Appointment</a>
-    </nav>
+    <div class="logo">WeCare <span>Health</span></div>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-text">
-            <h1>Your Health, Our Priority</h1>
-            <p>We provide exceptional care with experienced specialists across all medical fields.</p>
-            <div class="hero-text-btns">
-                <a href="#services">Explore Services</a>
-                <a href="#find-doctor">Find a Doctor</a>
-            </div>
-        </div>
-        <div class="hero-img">
-            <img src="https://khargharhospital.com/images/doc-dept.jpg" alt="Healthcare">
-        </div>
-    </section>
-
-    <!-- Appointment Search -->
-    <div class="appointment-search-container">
-        <h3>Set Your Location</h3>
-        <form class="appointment-search">
-            <div class="appo-search-box">
-                <i class="fa fa-map-marker-alt"></i>
-                <input type="text" placeholder="Enter your PIN code" required>
-            </div>
-            <button type="submit">Search</button>
-        </form>
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
     </div>
+
+    <!-- Navigation Menu -->
+    <ul class="menu" id="menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#find-doctor">Our Specialists</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+
+    <a href="b.html" class="nav-appointment-btn">Make an Appointment</a>
+</nav>
+    <!-- Hero Section -->
+   <section id="hero">
+  <div class="hero-text">
+    <h1>Your Health, Our Priority</h1>
+    <p>We provide exceptional care with experienced specialists across all medical fields.</p>
+    <div class="hero-text-btns">
+      <a href="#services">Explore Services</a>
+      <a href="#find-doctor">Find a Doctor</a>
+    </div>
+  </div>
+</section>
+    <!-- Appointment Search -->
+   <div class="appointment-search-container">
+  <h3>Set Your Location</h3>
+  <form class="appointment-search">
+    <div class="appo-search-box">
+      <i class="fa fa-map-marker-alt"></i>
+      <input type="text" placeholder="Enter your PIN code" required>
+    </div>
+    <button type="submit">Search</button>
+  </form>
+</div>
 
     <!-- Our Services Section -->
     <section id="services">
@@ -149,6 +152,14 @@
         <p><a href="#hero">Back to Top</a></p><br>
         <a href="b.html" class="nav-appointment-btn">Make an Appointment</a>
     </footer>
+
+      <script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+    }
+</script>
+
 
 </body>
 </html>
