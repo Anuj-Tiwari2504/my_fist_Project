@@ -353,7 +353,7 @@ footer a {
 /* === HERO SECTION AS BACKGROUND IMAGE === */
 #hero {
   background: linear-gradient(rgba(26, 115, 232, 0.6), rgba(26, 115, 232, 0.6)),
-              url('image.jpg') no-repeat center center/cover;
+              url('https://media.istockphoto.com/id/1312706413/photo/modern-hospital-building.jpg?s=1024x1024&w=is&k=20&c=PmaJ_oxBGdRw0c8g_-KAb2hZVzWEK5Yx83fe2plqLL4=') no-repeat center center/cover;
   color: white;
   padding: 100px 20px;
   text-align: center;
