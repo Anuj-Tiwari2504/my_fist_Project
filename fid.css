@@ -254,3 +254,269 @@ footer a {
     color: #f3c623;
     font-weight: bold;
 }
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .appointment-search {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-img {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .w-info-box {
+    flex: 1 1 90%;
+  }
+
+  .hero-img img {
+    width: 100%;
+  }
+}
+
+
+/* HAMBURGER ICON - sirf mobile par dikhega */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MOBILE SCREEN ke liye styling */
+@media (max-width: 768px) {
+
+  /* hamburger icon dikhana */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
+
+  /* navigation list hide karna */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1a73e8;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  /* jab class \"show\" ho to menu dikhe */
+  .menu.show {
+    display: flex;
+  }
+
+  /* menu items ke style */
+  .menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* nav overall alignment */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  /* Appointment button spacing */
+  .nav-appointment-btn {
+    margin-top: 10px;
+  }
+}
+
+/* === HERO SECTION AS BACKGROUND IMAGE === */
+#hero {
+  background: linear-gradient(rgba(26, 115, 232, 0.6), rgba(26, 115, 232, 0.6)),
+              url('image.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-text-btns a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #f3c623;
+  color: #1a73e8;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero-text-btns a:hover {
+  background-color: white;
+  color: #f3c623;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  #hero {
+    padding: 60px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-text-btns a {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+/* === Responsive for small screens === */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-text-btns a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
+.appointment-search-container {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  z-index: 1;
+  position: relative;
+}
+
+.appointment-search-container h3 {
+  text-align: center;
+  color: #1a73e8;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.appointment-search {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.appo-search-box {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.appo-search-box i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.appo-search-box input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.appointment-search button {
+  padding: 12px 24px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.appointment-search button:hover {
+  background: #f3c623;
+  color: #1a73e8;
+}
+
+@media (max-width: 600px) {
+  .appointment-search {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .appo-search-box, .appointment-search button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
